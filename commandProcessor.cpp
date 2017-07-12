@@ -42,7 +42,7 @@
     Initialize the command line interface. This initializes things. 
 */
 /**************************************************************************/
-void commandProcessor::begin(uint8_t prompt_on=PROMPT_ON)
+void commandProcessor::begin(uint8_t prompt_on)
 {
     // init the msg index
     msg_idx = 0;

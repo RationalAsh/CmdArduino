@@ -42,13 +42,15 @@
     Initialize the command line interface. This initializes things. 
 */
 /**************************************************************************/
-void commandProcessor::begin(uint32_t baud)
+void commandProcessor::begin(uint8_t prompt_on=PROMPT_ON)
 {
     // init the msg index
     msg_idx = 0;
 
     // init the command table
     cmd_tbl_list = NULL;
+
+    _PROMPT_ON = prompt_on;
 }
 
 /**************************************************************************/
@@ -107,7 +109,7 @@ void commandProcessor::cmdParse()
         if (!strcmp(argv[0], cmd_entry->cmd))
         {
             cmd_entry->func(argc, argv);
-            cmdDisplay();
+            if(_PROMPT_ON) cmdDisplay();
             return;
         }
     }
@@ -116,7 +118,7 @@ void commandProcessor::cmdParse()
     strcpy_P(buf, cmd_unrecog);
     cmdSerial.println(buf);
 
-    cmdDisplay();
+    if(_PROMPT_ON) cmdDisplay();
 }
 
 /**************************************************************************/

@@ -37,6 +37,8 @@
 #define COMMANDPROCESSOR_H
 
 #define MAX_MSG_SIZE    60
+#define PROMPT_ON 1
+#define PROMPT_OFF 0
 #include <Arduino.h>
 
 //#include <stdint.h>
@@ -63,7 +65,7 @@ class commandProcessor
 {
     public:
     commandProcessor(Stream &s=Serial):cmdSerial(s){}
-    void begin(uint32_t baud);
+    void begin(uint8_t prompt_on=PROMPT_ON);
     void add(char *name, void (*func)(int argc, char **argv));
     void poll();
     void test();
@@ -79,6 +81,8 @@ class commandProcessor
     uint8_t msg_idx;
     // linked list for command table
     cmd_t *cmd_tbl_list, *cmd_tbl;
+    //Should there be a prompt?
+    uint8_t _PROMPT_ON;
 };
 
 #endif //COMMANDPROCESSOR_H

@@ -14,8 +14,6 @@ modified set of functions. It should also work with the Teensy development board
 
 
 ## Original README text
----
-
 The Arduino Command Line Interface, aka CmdArduino, is a simple shell that can
 be run on an Arduino. It's nothing fancy and its main purpose is to allow users
 to easily call their functions on a running Arduino via a simple serial

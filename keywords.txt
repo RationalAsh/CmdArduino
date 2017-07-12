@@ -5,13 +5,14 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
+commandProcessor KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-cmdInit	KEYWORD2
-cmdPoll	KEYWORD2
-cmdAdd	KEYWORD2
+begin	KEYWORD2
+poll	KEYWORD2
+add	KEYWORD2
 cmdStr2Num	KEYWORD2
 
 #######################################

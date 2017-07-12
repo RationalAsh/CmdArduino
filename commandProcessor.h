@@ -76,7 +76,6 @@ class commandProcessor
     Stream &cmdSerial;
     // command line message buffer and pointer
     char msg[MAX_MSG_SIZE];
-    uint8_t *msg_ptr;
     uint8_t msg_idx;
     // linked list for command table
     cmd_t *cmd_tbl_list, *cmd_tbl;

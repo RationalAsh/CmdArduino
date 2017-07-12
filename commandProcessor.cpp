@@ -44,8 +44,7 @@
 /**************************************************************************/
 void commandProcessor::begin(uint32_t baud)
 {
-    // init the msg ptr
-    //msg_ptr = msg;
+    // init the msg index
     msg_idx = 0;
 
     // init the command table
@@ -87,8 +86,9 @@ void commandProcessor::cmdParse()
     //fflush(stdout);
     while(cmdSerial.available())
         cmdSerial.read(); //Does the same thing as fflush
-    Serial.print("Command: ");
-    Serial.println(msg);
+
+    //Serial.print("Command: ");
+    //Serial.println(msg);
     // parse the command line statement and break it up into space-delimited
     // strings. the array of strings will be saved in the argv array.
     argv[i] = strtok(msg, " ");
@@ -136,7 +136,6 @@ void commandProcessor::cmdHandler()
     case '\r':
         // terminate the msg and reset the msg ptr. then send
         // it to the handler for processing.
-        //*msg_ptr = '\0';
         msg[msg_idx] = '\0';
         cmdSerial.print("\r\n");
         msg_idx = 0;
@@ -156,8 +155,6 @@ void commandProcessor::cmdHandler()
         // normal character entered. add it to the buffer
         cmdSerial.print(c);
         msg[msg_idx++] = c;
-        //Serial.print(msg_idx);
-        //*msg_ptr++ = c;
         break;
     }
 }

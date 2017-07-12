@@ -2,10 +2,15 @@
 
 Modified by Ashwin Narayan
 
-##Modified version
+## Modified version
 
 The modified version of the library has been updated to C++ and features a slightly
 modified set of functions. It should also work with the Teensy development boards.
+
+## TODO:
+ * Update examples
+ * Test on non-teensy boards
+
 
 
 ## Original README text

@@ -1,5 +1,7 @@
 /*******************************************************************
     Copyright (C) 2009 FreakLabs
+    Copyright (C) 2017 Ashwin Narayan
+
     All rights reserved.
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions
@@ -27,7 +29,7 @@
     Please post support questions to the FreakLabs forum.
 *******************************************************************/
 /*!
-    \file Cmd.c
+    \file commandProcessor.c
     This implements a simple command line interface for the Arduino so that
     its possible to execute individual functions within the sketch. 
 */

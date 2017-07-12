@@ -19,3 +19,5 @@ cmdStr2Num	KEYWORD2
 # Constants (LITERAL1)
 #######################################
 
+PROMPT_ON LITERAL1
+PROMPT_OFF LITERAL1

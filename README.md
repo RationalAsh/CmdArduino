@@ -1,6 +1,15 @@
-## CmdArduino
+## commandProcessor (originally CmdArduino by Akiba at Freaklabs.org)
 
-by Akiba at Freaklabs.org
+Modified by Ashwin Narayan
+
+##Modified version
+
+The modified version of the library has been updated to C++ and features a slightly
+modified set of functions. It should also work with the Teensy development boards.
+
+
+## Original README text
+---
 
 The Arduino Command Line Interface, aka CmdArduino, is a simple shell that can
 be run on an Arduino. It's nothing fancy and its main purpose is to allow users

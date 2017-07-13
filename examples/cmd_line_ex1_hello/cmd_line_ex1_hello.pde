@@ -1,9 +1,5 @@
-/*****************************************************
-This is the demo sketch for the command line interface
-by FreakLabs. It's a simple command line interface
-where you can define your own commands and pass arguments
-to them. 
-*****************************************************/
+//Simplest example
+
 #include <commandProcessor.h>
 
 commandProcessor cmdProc(Serial);

@@ -4,12 +4,15 @@ by FreakLabs. It's a simple command line interface
 where you can define your own commands and pass arguments
 to them. 
 *****************************************************/
-#include <Cmd.h>
+#include <commandProcessor.h>
+
+commandProcessor cmdProc(Serial);
 
 void setup()
 {
   // init the command line and set it for a speed of 57600
-  cmdInit(57600);
+  Serial.begin(57600);
+  cmdProc.begin(PROMPT_ON);
   
   // add the commands to the command table. These functions must
   // already exist in the sketch. See the functions below. 
@@ -19,7 +22,7 @@ void setup()
   //
   // arg_cnt is the number of arguments typed into the command line
   // args is a list of argument strings that were typed into the command line
-  cmdAdd("hello", hello);
+  cmdProc.add("hello", hello);
 }
 
 void loop()
